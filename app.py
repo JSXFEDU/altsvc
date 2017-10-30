@@ -8,7 +8,7 @@ def hello_world():
 	r = Response()
 #	r.headers['Alt-Svc'] = 'h2="marvin-production-0-1888329800.cn-north-1.elb.amazonaws.com.cn:443"; ma=3600'
 #	r.headers['Alt-Svc'] = 'h2="marvin-production-1-1251614655.cn-north-1.elb.amazonaws.com.cn:443"; ma=3600'
-	r.headers['Alt-Svc'] = 'h2="{}"; ma=3600'.format(os.environ['OTHERDOMAIN'])
+	r.headers['Alt-Svc'] = 'h2="{}"; ma=10'.format(os.environ['OTHERDOMAIN'])
 
 	print(r.headers)
 	print(type(r.headers))
